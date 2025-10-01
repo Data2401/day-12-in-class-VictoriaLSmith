@@ -671,6 +671,29 @@ start working on the questions I ask there!)</p>
 ##   gender   eye_color     n
 ##   &lt;chr&gt;    &lt;chr&gt;     &lt;int&gt;
 ## 1 feminine blue          6</code></pre>
+<pre class="r"><code>mysw %&gt;% group_by(hair_color,skin_color) %&gt;%
+  count() %&gt;% filter(n &gt; 1) %&gt;% arrange(n)</code></pre>
+<pre><code>## # A tibble: 17 × 3
+## # Groups:   hair_color, skin_color [17]
+##    hair_color skin_color     n
+##    &lt;chr&gt;      &lt;chr&gt;      &lt;int&gt;
+##  1 black      fair           2
+##  2 black      tan            2
+##  3 black      yellow         2
+##  4 brown      brown          2
+##  5 none       blue           2
+##  6 none       dark           2
+##  7 none       none           2
+##  8 none       orange         2
+##  9 none       white          2
+## 10 white      fair           2
+## 11 blond      fair           3
+## 12 none       pale           3
+## 13 black      dark           4
+## 14 none       green          4
+## 15 none       grey           6
+## 16 brown      fair           7
+## 17 brown      light          8</code></pre>
 </div>
 
 
