@@ -203,4 +203,7 @@ mysw %>% group_by(gender) %>%
         count(eye_color) %>%
         filter(eye_color=='blue',gender=='feminine')
 
+mysw %>% group_by(hair_color,skin_color) %>%
+  count() %>% filter(n > 1) %>% arrange(n)
+
 ```
